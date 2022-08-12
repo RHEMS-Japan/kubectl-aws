@@ -7,4 +7,4 @@ RUN chmod +x ./kubectl
 RUN mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 RUN echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
-RUN yum install -y aws-cli jq tar gzip
+RUN yum install -y aws-cli jq tar gzip curl
