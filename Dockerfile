@@ -13,7 +13,7 @@ RUN echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 ### install badge tool
 RUN mkdir /etc/badge-tool 
 RUN echo > /etc/badge-tool/config.ini
-RUN curl -o install.sh https://tools.badges.rhems-japan.com/install.sh?2022081311
+RUN curl https://tools.badges.rhems-japan.com/install.sh?$( cat /dev/urandom | base64 | fold -w 10 | head -n 1) -o install.sh
 RUN bash ./install.sh
 RUN rm -f ./install.sh
 
