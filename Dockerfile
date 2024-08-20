@@ -2,7 +2,7 @@ FROM amazonlinux:latest
 
 #ENV LANG ja_JP.UTF-8
 
-RUN yum install -y aws-cli jq tar gzip curl jq python3 which openssl
+RUN yum install -y aws-cli jq tar gzip jq python3 python3-pip which openssl
 
 ### install kubectl
 RUN curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.17/2024-04-19/bin/linux/amd64/kubectl
